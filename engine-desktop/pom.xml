@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.screenshotmaker</groupId>
+    <artifactId>screenshot-maker</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <artifactId>engine-desktop</artifactId>
+  <packaging>jar</packaging>
+  <name>Screenshot Maker :: Desktop Engine</name>
+  <description>CaptureEngine implementation that walks a running Windows application's UI tree via
+    WinAppDriver (Microsoft's Windows Application Driver) and captures a screenshot of every screen
+    and dialog it safely discovers. Windows-only by construction; refuses to run on other OSes with
+    a clear error rather than failing obscurely.</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.screenshotmaker</groupId>
+      <artifactId>core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.appium</groupId>
+      <artifactId>java-client</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>

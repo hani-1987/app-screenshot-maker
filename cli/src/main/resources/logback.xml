@@ -1,0 +1,15 @@
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="${SCREENSHOTMAKER_LOG_LEVEL:-INFO}">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <!-- These libraries are chatty at INFO; keep the default run readable. -->
+    <logger name="org.openqa.selenium" level="WARN" />
+    <logger name="org.apache.hc" level="WARN" />
+</configuration>
